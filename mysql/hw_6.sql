@@ -12,7 +12,7 @@ commit;
 -- 2 task
 
 create or replace view product_catalog (product_name,catalogs_name)
-  as p.name,c.name
+  as select p.name,c.name
   from products p left join catalogs c on (p.catalog_id=c.id)
 
 -- 3 task
